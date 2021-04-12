@@ -1,5 +1,5 @@
 
-name: Tag version on Pluto release
+name: Tag latest version on Pluto release
 
 on:
   workflow_dispatch:
