@@ -22,6 +22,7 @@ jobs:
       - name: Update Pkg environment
         run: julia --project -e '
           import Pkg;
+          Pkg.remove("Pluto");
           Pkg.add([Pkg.PackageSpec(name="Pluto", rev="v${{ github.event.inputs.version }}")]);
           Pkg.update();
           '
