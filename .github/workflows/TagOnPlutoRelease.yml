@@ -30,5 +30,4 @@ jobs:
           commit_message: Update Manifest.toml
           # Optional tag message 
           # Action will create and push a new tag to the remote repository and the defined branch
-#           tagging_message: 'v${{ github.event.inputs.version }}'
-          branch: hello-world
+          tagging_message: 'v${{ github.event.inputs.version }}'
