@@ -19,7 +19,7 @@ jobs:
         uses: julia-actions/setup-julia@v1
         with:
             version: 1.6
-      - name: Run Pluto notebooks
+      - name: Update Pkg environment
         run: julia --project -e '
           import Pkg;
           Pkg.add([Pkg.PackageSpec(name="Pluto", rev="v${{ github.event.inputs.version }}")]);
@@ -31,3 +31,4 @@ jobs:
           # Optional tag message 
           # Action will create and push a new tag to the remote repository and the defined branch
 #           tagging_message: 'v${{ github.event.inputs.version }}'
+          branch: hello-world
