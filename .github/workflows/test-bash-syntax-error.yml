@@ -25,14 +25,14 @@ jobs:
                     else
                         echo "::error ::Failed to launch, failed to build"
                         exit 1
-                    end
-                end
+                    fi
+                fi
                 if grep -q "\"phase\": \"ready\"" output-${{ matrix.binder-provider }}.txt; then
                     exit 0
                 else
                     echo "::error ::Failed to launch, not sure why"
                     exit 1
-                end
+                fi
                 
             - name: Upload log file
               if: ${{ always() }}
